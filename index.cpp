@@ -49,11 +49,20 @@ char Encrypt_Letter(char letter_to_ecrypt, int position,
   return encrypt_letter;
 }
 
+char Decrypt_Letter(char letter_to_ecrypt, int position,
+                        string encrypt_key) {
+  char decrypt_letter = ' ';
+
+
+
+  return decrypt_letter;
+}
+
 
 string Encrypt_Message(string encrypt_key, string message) {
   size_t j = 0;
   for (size_t i = 0; i < message.length(); i++) {
-    if (i <= encrypt_key.length()) {
+    if (i < encrypt_key.length()) {
       j = i;
     } else {
       j = 0;
@@ -63,9 +72,13 @@ string Encrypt_Message(string encrypt_key, string message) {
   return message;
 }
 
+string Decrypt_Message(string encrypt_key, string message) {
+  return " ";
+}
+
 
 int main() {
-  string encrypt_key = "HILARY";
+  string encrypt_key = "HILLARY";
   string word_to_encrypt = "";
 
   cout << "ingresa la clave de encriptacion" << endl;
